@@ -7,6 +7,8 @@
 #include <QSerialPortInfo>
 #include <QTimer>
 
+#include <QDebug>
+
 PicoAPRSTrackerConfig::PicoAPRSTrackerConfig(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::PicoAPRSTrackerConfig)
@@ -44,6 +46,7 @@ void PicoAPRSTrackerConfig::connectToDevice()
         sport->setBaudRate(QSerialPort::Baud115200);
         connect(sport, &QSerialPort::readyRead, this, &PicoAPRSTrackerConfig::on_readyRead);
         sport->write("READCONFIG|\r");
+        qDebug()<<"read config...";
     }
     else {
         QMessageBox::warning(this, "Unable to Connect", "Unable to connect to the chosen serial port.");
@@ -53,6 +56,8 @@ void PicoAPRSTrackerConfig::connectToDevice()
 void PicoAPRSTrackerConfig::on_readyRead()
 {
     inbytes.append(sport->readAll());
+    qDebug()<<"on_readyRead..."<<inbytes;
+
     if(inbytes.count('|') == 5) { // six delimited fields
         ui->plainTextEdit->appendPlainText(inbytes);
         const QString tmp = inbytes;

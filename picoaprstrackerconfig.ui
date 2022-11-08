@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>401</width>
-    <height>325</height>
+    <width>442</width>
+    <height>385</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -200,8 +200,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>401</width>
-     <height>21</height>
+     <width>442</width>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -216,6 +216,7 @@
     </property>
     <addaction name="action_Read_from_Device"/>
     <addaction name="action_Write_to_Device"/>
+    <addaction name="action_Serial_Port"/>
    </widget>
    <addaction name="menu_File"/>
    <addaction name="menu_Config"/>
@@ -238,7 +239,7 @@
   </action>
   <action name="action_Serial_Port">
    <property name="text">
-    <string>&amp;Serial Port</string>
+    <string>Choose &amp;Serial Port</string>
    </property>
   </action>
  </widget>
