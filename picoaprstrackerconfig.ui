@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PicoAPRSTrackerConfig</class>
+ <widget class="QMainWindow" name="PicoAPRSTrackerConfig">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>401</width>
+    <height>325</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PicoAPRSTrackerConfig</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="4" column="1">
+     <widget class="QComboBox" name="intervalComboBox">
+      <property name="currentIndex">
+       <number>5</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>15</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>30</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="6" column="0" colspan="2">
+     <widget class="QPlainTextEdit" name="plainTextEdit"/>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="digi2LineEdit">
+      <property name="maxLength">
+       <number>9</number>
+      </property>
+      <property name="placeholderText">
+       <string>default: WIDE2-1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="sourceCallLineEdit">
+      <property name="maxLength">
+       <number>9</number>
+      </property>
+      <property name="placeholderText">
+       <string>i.e. AB4MW-12</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Second Digipeater</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Comment (&lt;= 36 chars)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="digi1LineEdit">
+      <property name="maxLength">
+       <number>9</number>
+      </property>
+      <property name="placeholderText">
+       <string>default: WIDE1-1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>APRS Symbol Character</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Beacon Interval (min)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="commentLineEdit">
+      <property name="maxLength">
+       <number>36</number>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Source Call Sign-SSID</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QComboBox" name="aprsSymbolComboBox">
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>&gt;</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>j</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>#</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>First Digipeater</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QPushButton" name="writeConfigButton">
+      <property name="text">
+       <string>Write Configuration to Device</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QPushButton" name="readConfigButton">
+      <property name="text">
+       <string>Read Configuration from Device</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>401</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionE_xit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Config">
+    <property name="title">
+     <string>&amp;Config</string>
+    </property>
+    <addaction name="action_Read_from_Device"/>
+    <addaction name="action_Write_to_Device"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_Config"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionE_xit">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="action_Read_from_Device">
+   <property name="text">
+    <string>&amp;Read from Device</string>
+   </property>
+  </action>
+  <action name="action_Write_to_Device">
+   <property name="text">
+    <string>&amp;Write to Device</string>
+   </property>
+  </action>
+  <action name="action_Serial_Port">
+   <property name="text">
+    <string>&amp;Serial Port</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>sourceCallLineEdit</tabstop>
+  <tabstop>digi1LineEdit</tabstop>
+  <tabstop>digi2LineEdit</tabstop>
+  <tabstop>commentLineEdit</tabstop>
+  <tabstop>intervalComboBox</tabstop>
+  <tabstop>aprsSymbolComboBox</tabstop>
+  <tabstop>plainTextEdit</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
